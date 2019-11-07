@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  timetagger:
+    image: seekworser/swabian-time-tagger
+    ports:
+      - 8888:8888

@@ -1,13 +1,14 @@
 FROM ubuntu:latest
 
 ARG deb_file="timetagger_2.4.4-1_bionic_amd64.deb"
+
+# ARG conda_file="Anaconda3-4.2.0-Linux-x86_64.sh"
+# ENV CONDA_FILE=${conda_file}
+
 ENV DEB_FILE=${deb_file}
-
-ARG conda_file="Anaconda3-4.2.0-Linux-x86_64.sh"
-ENV CONDA_FILE=${conda_file}
-
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH /root/anaconda/bin:$PATH
+ENV DISPLAY=host.docker.internal:0
 
 COPY ${deb_file} /
 
@@ -35,3 +36,4 @@ RUN \
 
 RUN dpkg -i $DEB_FILE && rm $DEB_FILE && apt-get -f install
 
+CMD ["/opt/swabianinstruments/timetagger/TimeTaggerServer/TimeTaggerServer"]
