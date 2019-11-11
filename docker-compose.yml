@@ -2,6 +2,11 @@ version: "3"
 
 services:
   timetagger:
-    image: seekworser/swabian-time-tagger
+    build:
+      context: .
+      args:
+        host_display: $DISPLAY
+    # image: seekworser/swabian-time-tagger
+    hostname: swabian
     ports:
       - 8888:8888
