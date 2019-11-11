@@ -2,11 +2,6 @@ version: "3"
 
 services:
   timetagger:
-    build:
-      context: .
-      args:
-        host_display: host.docker.internal:0
-    # image: seekworser/swabian-time-tagger
-    hostname: swabian
+    image: seekworser/swabian-time-tagger
     ports:
       - 8888:8888
