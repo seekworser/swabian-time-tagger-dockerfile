@@ -5,7 +5,7 @@ services:
     build:
       context: .
       args:
-        host_display: $DISPLAY
+        host_display: host.docker.internal:0
     # image: seekworser/swabian-time-tagger
     hostname: swabian
     ports:
