@@ -1,1 +1,0 @@
-docker build --no-cache=true --rm -t seekworser/swabian-time-tagger .

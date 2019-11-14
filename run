@@ -1,0 +1,4 @@
+#! /bin/sh
+
+docker-machine start swabian-time-tagger
+docker $(docker-machine config swabian-time-tagger) run --rm -ti --privileged -p 8888:8888 seekworser/swabian-time-tagger
