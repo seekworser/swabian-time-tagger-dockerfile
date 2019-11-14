@@ -17,7 +17,7 @@ if !(type "brew" > /dev/null 2>&1); then
 fi
 
 echo "Following software will be installed."
-echo "- docker\n- xquartz\n- virtualbox\n- virtualbox-extension-pack"
+echo "- docker\n- virtualbox\n- virtualbox-extension-pack"
 
 brew update
 brew cask install docker
