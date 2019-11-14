@@ -21,6 +21,5 @@ echo "- docker\n- xquartz\n- virtualbox\n- virtualbox-extension-pack"
 
 brew update
 brew cask install docker
-brew cask install xquartz
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
